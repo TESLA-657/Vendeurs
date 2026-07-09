@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPY - Liste d'attente des vendeurs</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#hero" class="brand">
+                <img src="images/logo2.png" alt="SHOPY logo" class="brand-logo">
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero">Accueil</a>
+                <a href="#about">Pourquoi SHOPY ?</a>
+                <a href="#benefits">Avantages</a>
+                <a href="#join">Rejoindre</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero section-hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <span class="eyebrow">Lancement vendeur premium</span>
+                    <h1>Développez votre commerce avec SHOPY</h1>
+                    <p>Rejoignez gratuitement la liste d'attente et soyez parmi les premiers à vendre vos produits partout en Guinée avec une boutique moderne, mobile-friendly et transparente.</p>
+                    <div class="hero-actions reveal">
+                        <a href="#join" class="btn btn-primary">Rejoindre maintenant</a>
+                        <a href="#about" class="btn btn-secondary">En savoir plus</a>
+                    </div>
+                    <div class="hero-metrics reveal">
+                        <div>
+                            <strong>+150</strong>
+                            vendeurs déjà inscrits
+                        </div>
+                        <div>
+                            <strong>100%</strong>
+                            support WhatsApp rapide
+                        </div>
+                    </div>
+                    <a href="https://wa.me/224611476352" target="_blank" class="whatsapp-link reveal">
+                        <i class="bi bi-whatsapp"></i>
+                        +224 611 476 352
+                    </a>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <img src="images/vendeur.jpg" alt="Vendeur SHOPY" loading="lazy">
+                        <div class="hero-card-tag"><i class="bi bi-star-fill"></i> Priorité lancement</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about section-pad">
+            <div class="container about-inner">
+                <div class="section-head">
+                    <span class="eyebrow">Pourquoi SHOPY</span>
+                    <h2>Une plateforme créée pour les commerçants guinéens</h2>
+                    <p>SHOPY simplifie la vente en ligne pour votre boutique, même si vous débutez. Créez votre vitrine, gérez les commandes et augmentez votre visibilité en quelques clics.</p>
+                </div>
+
+                <div class="cards-grid">
+                    <article class="feature-card reveal">
+                        <div class="feature-icon"><i class="bi bi-shop-window"></i></div>
+                        <h3>Touchez plus de clients</h3>
+                        <p>Diffusez vos produits à toute la Guinée et transformez la curiosité en ventes.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <div class="feature-icon"><i class="bi bi-phone"></i></div>
+                        <h3>Gérez votre boutique facilement</h3>
+                        <p>Une interface claire, intuitive et mobile pour piloter votre activité en temps réel.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <div class="feature-icon"><i class="bi bi-truck"></i></div>
+                        <h3>Développez votre activité</h3>
+                        <p>Accédez à des outils marketing pour booster votre catalogue et fidéliser vos clients.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="benefits section-bleed">
+            <div class="benefits-overlay"></div>
+            <div class="container benefits-inner">
+                <div class="benefits-card reveal">
+                    <span class="badge">🚀 Offre de lancement</span>
+                    <h2>Rejoindre la liste d'attente, c'est bénéficier :</h2>
+                    <p>Les premiers vendeurs obtiennent un accès prioritaire, un accompagnement personnalisé et des conditions exclusives pour leur boutique.</p>
+                    <ul class="benefits-list">
+                        <li><i class="bi bi-check-circle-fill"></i> Création gratuite de votre boutique</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Priorité de validation du compte vendeur</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Accompagnement pour vos premières publications</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Visibilité renforcée dès le lancement</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Accès aux nouveautés en avant-première</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="join section-pad">
+            <div class="container join-inner">
+                <div class="join-copy">
+                    <span class="eyebrow">Inscription</span>
+                    <h2>Rejoignez la liste d'attente</h2>
+                    <p>Remplissez vos informations dès maintenant et obtenez un démarrage prioritaire pour votre boutique SHOPY.</p>
+                </div>
+
+                <form id="sellerForm" class="join-form reveal">
+                    <div class="form-row">
+                        <label for="fullname">Nom complet</label>
+                        <input type="text" id="fullname" placeholder="Ex : Mamadou Diallo" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="shopname">Nom de la boutique</label>
+                        <input type="text" id="shopname" placeholder="Ex : Diallo Informatique">
+                    </div>
+                    <div class="form-row">
+                        <label for="city">Ville</label>
+                        <select id="city">
+                            <option value="">Choisissez une ville</option>
+                            <option>Conakry</option>
+                            <option>Mamou</option>
+                            <option>Kankan</option>
+                            <option>Kindia</option>
+                            <option>Labé</option>
+                            <option>N'Zérékoré</option>
+                            <option>Faranah</option>
+                            <option>Boké</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="whatsapp">WhatsApp</label>
+                        <input type="tel" id="whatsapp" placeholder="+224 xxx xx xx xx">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="exemple@gmail.com" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="category">Catégorie</label>
+                        <select id="category">
+                            <option value="">Sélectionnez</option>
+                            <option>Informatique</option>
+                            <option>Téléphones</option>
+                            <option>Mode</option>
+                            <option>Beauté</option>
+                            <option>Maison</option>
+                            <option>Alimentation</option>
+                            <option>Autres</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Rejoindre la liste d'attente</button>
+                    <p id="message" class="form-message"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <a href="#hero" class="brand invert">SHOPY</a>
+                <p>La plateforme qui aide les commerçants guinéens à vendre leurs produits en ligne avec élégance et performance.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Accueil</a>
+                <a href="#about">Pourquoi SHOPY ?</a>
+                <a href="#benefits">Avantages</a>
+                <a href="#join">Inscription</a>
+            </div>
+            <p class="copyright">© 2026 SHOPY. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="firebase-config.js"></script>
+</body>
+</html>
