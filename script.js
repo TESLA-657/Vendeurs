@@ -64,25 +64,26 @@ if (sellerForm) {
 
         showFormMessage('Enregistrement en cours...');
 
-        // If a sendToFirestore function is defined (from firebase-config.js), use it.
-        if (window.sendToFirestore && typeof window.sendToFirestore === 'function') {
-            try {
-                await window.sendToFirestore(submission);
-                saveLocalSubmission(submission);
-                window.location.href = 'thank-you.html';
-                return;
-            } catch (err) {
-                console.error('Firestore save failed', err);
-                // fallback to local save
-                saveLocalSubmission(submission);
-                showFormMessage('Enregistré localement. Problème d\'envoi au serveur, vous serez contacté.', false);
-                window.location.href = 'thank-you.html';
-                return;
-            }
-        }
+        try {
+            const response = await fetch("https://formspree.io/f/mljrzndw", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(submission)
+            });
 
-        // No firebase configured => save locally and redirect
-        saveLocalSubmission(submission);
-        window.location.href = 'thank-you.html';
+            if (response.ok) {
+                // Enregistrement local en plus par sécurité
+                saveLocalSubmission(submission);
+                window.location.href = 'thank-you.html';
+            } else {
+                showFormMessage("Erreur lors de l'envoi. Veuillez réessayer plus tard.", false);
+            }
+        } catch (error) {
+            console.error("Formspree error", error);
+            showFormMessage("Erreur de connexion. Veuillez vérifier votre internet.", false);
+        }
     });
 }
